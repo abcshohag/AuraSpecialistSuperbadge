@@ -1,0 +1,22 @@
+<aura:component controller="BoatSearchController">
+    <aura:attribute name="boatTypeToIds" type="Map" />
+    <aura:attribute name="options" type="List" default="[
+        {'label': 'empty', 'value': ''},
+        {'label': 'allTypes', 'value': 'All Types'},
+        ]"
+    />
+    <h3>Find a boat:</h3>
+
+    <lightning:layout horizontalAlign="center">
+        <lightning:combobox
+            name="progress"
+            label="Status"
+            value="empty"
+            placeholder="Select Progress"
+            options="{!v.options}"
+            onchange="{!c.handleChange}" >
+        </lightning:combobox>
+        <lightning:button variant="brand" label="Search" title="searchBtn"></lightning:button>
+        <lightning:button variant="neutral" label="New" title="newBoat"></lightning:button>
+    </lightning:layout>
+</aura:component>	

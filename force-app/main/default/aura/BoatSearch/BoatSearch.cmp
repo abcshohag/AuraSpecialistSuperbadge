@@ -1,0 +1,8 @@
+<aura:component>
+    <lightning:card title="Find a Boat:" class="slds-p-bottom_small">
+        <c:BoatSearchForm />
+    </lightning:card>
+    <lightning:card title="Matching Boats:">
+        <c:BoatSearchResults />
+    </lightning:card>
+</aura:component>	
